@@ -1,0 +1,204 @@
+
+/*TUI DataV all components style*/
+body{
+  color:#fff;
+  margin:0px;
+}
+.tuiv-fullscreen{
+  position: fixed;
+  color: #fff;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  z-index:999;
+  background:#000;
+  .v-scrollbar__wrap {
+      max-height: calc(100vh + 17px);
+  }
+  .v-scrollbar__view{
+    height:56.25vw;
+    overflow: hidden;
+ }
+  .blockBd{
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+.tuiv-panel {
+  width: 100%;
+  min-height: 50px;
+  position: relative;
+  .grid-layer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    > div {
+      position: absolute;
+    }
+    .grid-layer-l-t {
+      left: 0px;
+      top: 0px;
+    }
+    .grid-layer-t {
+      top: 0px;
+      background-position: center 0px;
+    }
+    .grid-layer-r-t {
+      right: 0px;
+      top: 0px;
+      background-position: right top;
+    }
+    .grid-layer-l {
+      left: 0px;
+      background-position: left center;
+    }
+    .grid-layer-c {
+      background-position: center;
+    }
+    .grid-layer-r {
+      right: 0px;
+      background-position: right center;
+    }
+    .grid-layer-l-b {
+      left: 0px;
+      bottom: 0px;
+      background-position: left bottom;
+    }
+    .grid-layer-b {
+      bottom: 0px;
+      background-position: center bottom;
+    }
+    .grid-layer-r-b {
+      right: 0px;
+      bottom: 0px;
+      background-position: right bottom;
+    }
+  }
+  .header {
+    padding: 18px 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .content {
+    padding: 20px;
+    position: relative;
+  }
+  .header+.content{
+    padding-top:0px;
+  } 
+}
+.tuiv-running-number{
+  font-size: 30px;
+  font-weight: 700;
+  display: inline-block;
+  .pic-char{
+    display: flex;
+    .char{
+      text-align: center;
+    }
+  }
+}
+.tuiv-scroll-table {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  table {
+    width: 100%;
+  }
+  .header-wrapper {
+    display: flex;
+    flex-direction: row;
+    background: rgba(4, 189, 246, 1);
+    .header-item {
+      display: inline-block;
+      flex:1;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding:0 10px;
+      line-height: 30px;
+    }
+  }
+  .body-wrapper {
+    overflow: hidden;
+  }
+  .row-item {
+    display: flex;
+    flex-direction: row;
+    .cell {
+      flex: 1;
+      display: block;
+      padding: 0 10px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .hide {
+    transition: all 0.3s;
+    height: 0px !important;
+  }
+}
+.tuiv-scrollbar{
+  overflow: hidden;
+  position: relative;
+  &:active > .v-scrollbar__bar,
+  &:focus > .v-scrollbar__bar,
+  &:hover > .v-scrollbar__bar {
+    opacity: 1;
+  }
+  .v-scrollbar__wrap {
+    overflow: scroll;
+    height: 100%;
+    margin-right: -17px;
+    margin-bottom: -17px;
+  }
+  .v-scrollbar__bar {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    z-index: 1;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.34s ease-out;
+  }
+  .v-scrollbar__bar.is-vertical {
+    width: 6px;
+    top: 2px;
+  }
+  .v-scrollbar__thumb {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border-radius: inherit;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s;
+  }
+  .v-scrollbar__bar.is-vertical > div {
+    width: 100%;
+  }
+}
+.tuiv-ring{
+  width:100px;
+  height:100px;
+  line-height: 100px;
+  border:10px solid black;
+  border-radius:50%;
+  position:relative;
+}
+.tuiv-screenfull{
+  display: inline-block;
+  cursor: pointer;
+}

@@ -1,16 +1,25 @@
 {
-  "name": "tui-v",
+  "name": "tui-datav",
+  "description": "tui大屏组件库",
   "version": "0.1.0",
-  "private": true,
+  "author": "siwei",
+  "private": false,
+  "main": "./libs/tuiv.common.js",
+  "files": [
+    "libs"
+  ],
   "scripts": {
+    "start": "vue-cli-service serve --mode development",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --mode production  --target lib --name tui-datav ./src/vlibs/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "echarts": "^4.7.0",
-    "vue": "^2.6.14"
+    "screenfull": "^6.0.2",
+    "vue": "^2.6.14",
+    "vue-router": "^3.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -20,6 +29,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "vue-template-compiler": "^2.6.14"
